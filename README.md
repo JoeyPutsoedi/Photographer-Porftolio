@@ -16,3 +16,4 @@
   <li>Visual Studio Code</li>
 </ul>
 <h2>Complete Portfolio Walkthrough On Youtube</h1><br></br>
+<p style:"textAlign: center;"> SCREENSHOTS: </p>
