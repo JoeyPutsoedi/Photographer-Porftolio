@@ -6,9 +6,9 @@ import IMG1 from "../Images/EVENTS/IMG1.jpg";
 import IMG2 from "../Images/EVENTS/IMG2.jpg";
 import IMG3 from "../Images/EVENTS/IMG3.jpg";
 import IMG4 from "../Images/EVENTS/IMG4.jpg";
-import IMG5 from "../Images/EVENTS/IMG5.jpg";
-import IMG6 from "../Images/EVENTS/IMG6.jpg";
-import IMG7 from "../Images/EVENTS/IMG7.jpg";
+import IMG5 from "../Images/EVENTS/img5.jpg";
+import IMG6 from "../Images/EVENTS/img6.jpg";
+import IMG7 from "../Images/EVENTS/img7.jpg";
 
 const Events = () => {
   return (
