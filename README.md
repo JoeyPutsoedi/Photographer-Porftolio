@@ -16,7 +16,7 @@ Creative Rori Portfolio
   <li>Visual Studio Code</li>
 </ul>
 <h2> Live Demo: </h2>
-https://fivestarquestionnairee.netlify.app/
+https://creativerori.netlify.app/
 
 <p>Responsive To Mobile</p>
 <h2>Complete Walkthrough On Youtube:</h2>
