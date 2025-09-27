@@ -10,7 +10,7 @@ Creative Rori Portfolio
   <li>Cloudinary</li>
 </ul>
 <h1>Environment Used</h1>
-<ul><img width="1366" height="768" alt="Screenshot (55)" src="https://github.com/user-attachments/assets/f610ef2f-d02d-4cba-8b92-f7d85e8fe1c7" />
+<ul>
 
   <li>Windows 10</li>
   <li>Visual Studio Code</li>
@@ -20,7 +20,7 @@ https://fivestarquestionnairee.netlify.app/
 
 <p>Responsive To Mobile</p>
 <h2>Complete Walkthrough On Youtube:</h2>
-<h3 font-size="30px"><a href="https://youtu.be/_rxXGFvCNhY">CLICK ME :)</a></h3>
+<h3 font-size="30px"><a href="https://youtu.be/4ryEIU2y5po?si=DfLCOkklTYeJ94wY">CLICK ME :)</a></h3>
 
 <h2>DISCLAIMER: </h2>
 <p>NO AI OR TEMPLATES WERE USED IN THE CREATION OF THIS PROJECT</p>
