@@ -9,7 +9,7 @@ import img6 from "../Images/GRADS/IMG4.jpg";
 import img7 from "../Images/ELOPMENT SHOOTS/IMG4.jpg";
 import img8 from "../Images/ELOPMENT SHOOTS/IMG8.jpg";
 import img9 from "../Images/EVENTS/IMG3.jpg";
-import img10 from "../Images/EVENTS/IMG7.jpg";
+import img10 from "../Images/EVENTS/img7.jpg";
 import img11 from "../Images/STUDIO/IMG3.jpg";
 import img12 from "../Images/STUDIO/IMG5.jpg";
 import GallerySec from "../Components/GallerySec";
