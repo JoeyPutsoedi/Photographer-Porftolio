@@ -15,7 +15,7 @@ import Editorials from "./Pages/Editorials";
 import Birthdays from "./Pages/Birthdays";
 import Graduations from "./Pages/Graduations";
 import Elopment from "./Pages/Elopment";
-import Events from "./Pages/Events.JSX";
+import Events from "./Pages/Events.jsx";
 import Studio from "./Pages/Studio";
 import "./fontawesome/css/all.min.css";
 import "./boxicons/css/boxicons.css";
