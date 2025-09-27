@@ -1,0 +1,106 @@
+/*-----------------------Fonts------------------------------*/
+@font-face {
+  font-family: coco;
+  src: url(Gotham/Gotham-Medium.otf);
+}
+
+@font-face {
+  font-family: AlteB;
+  src: url(Gotham/AlteHaasGroteskBold.ttf);
+}
+
+@font-face {
+  font-family: Alte;
+  src: url(Gotham/AlteHaasGroteskRegular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html,
+body {
+  overflow: hidden;
+  font-family: coco;
+  text-transform: uppercase;
+  width: 100vw;
+}
+
+nav,
+footer {
+  position: absolute;
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  bottom: 0;
+}
+
+nav > div,
+footer > div {
+  padding: 2em;
+  cursor: pointer;
+}
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+}
+
+.header p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.placeholder {
+  text-align: center;
+  font-family: AlteB;
+  font-size: 80px;
+  letter-spacing: -7px;
+  color: #000;
+}
+
+/*-------------------MEDIA QUERIES-------------------------------*/
+@media (max-width: 450px) {
+  .header {
+    width: 100%;
+    place-items: center;
+  }
+  .placeholder {
+    font-size: 40px;
+    place-self: center;
+    letter-spacing: 1px;
+  }
+
+  nav,
+  footer {
+    text-align: center;
+    padding: 4em;
+  }
+}
+
+@media (max-width: 400px) {
+  .placeholder {
+    font-size: 40px;
+    place-self: center;
+    letter-spacing: 1px;
+  }
+
+  .header p {
+    font-size: 10px;
+  }
+}

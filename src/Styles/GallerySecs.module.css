@@ -1,0 +1,228 @@
+/*-----------------------Fonts------------------------------*/
+@font-face {
+  font-family: coco;
+  src: url(Gotham/Gotham-Medium.otf);
+}
+
+@font-face {
+  font-family: AlteB;
+  src: url(Gotham/AlteHaasGroteskBold.ttf);
+}
+
+@font-face {
+  font-family: Alte;
+  src: url(Gotham/AlteHaasGroteskRegular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: coco;
+  width: 100vw;
+  color: white;
+}
+/*------------------Navigation bar---------------------*/
+
+.nav {
+  background-color: #000;
+  padding: 0.5em 1em 2em 1em;
+  display: flex;
+  justify-content: space-between;
+  height: 2em;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav a {
+  font-size: 14px;
+}
+
+.menu-icon {
+  color: white;
+  display: none;
+}
+
+#logo {
+  letter-spacing: 1px;
+  font-weight: 1000;
+  font-size: 16px;
+}
+.navItems {
+  opacity: 1;
+  color: white;
+}
+.navItems a {
+  padding-left: 50px;
+}
+
+/*------------Hero Section-----------------------*/
+.secs {
+  min-height: 100vh;
+  padding-top: 3.7em;
+}
+.back {
+  cursor: pointer;
+  margin-left: 1em;
+  font-size: 0.8em;
+}
+
+.back i {
+  font-size: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.set {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+  overflow-x: scroll;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.box img {
+  height: 550px;
+  width: 405px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+/*------------Video Section-----------------------*/
+.contentsVid {
+  padding: 3em;
+}
+.backVid {
+  cursor: pointer;
+  margin-left: 1em;
+  font-size: 0.8em;
+  color: white;
+  text-decoration: none;
+}
+
+.backVid i {
+  font-size: 1em;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.setVid {
+  margin-top: 0.5em;
+  height: 100%;
+  overflow-x: scroll;
+}
+
+.set2Vid {
+  margin: -1em 1em 0em 1em;
+  height: 100%;
+  overflow-x: scroll;
+}
+
+.uppercolVid {
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vidPlaceholder {
+  /* background-color: rgb(81, 81, 81); */
+  height: 400px;
+  width: 800px;
+  border-radius: 4px;
+}
+
+.lowercolVid {
+  height: 100%;
+  width: 100%;
+  max-width: fit-content;
+  display: flex;
+  gap: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3em;
+}
+
+.footVid {
+  height: 125px;
+  width: 250px;
+  border-radius: 16px;
+  object-fit: cover;
+  cursor: pointer;
+}
+/*----------------------Scroller-----------------------*/
+::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  opacity: 0;
+  border-radius: 2px;
+  background-color: #99735d;
+}
+
+/*----------------------Media queries-----------------------*/
+@media (max-width: 600px) {
+  body {
+    overflow-y: scroll;
+  }
+
+  .set {
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .nav-items {
+    opacity: 0;
+    z-index: 11;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 60px;
+    right: 1px;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    gap: 2em;
+    pointer-events: none;
+  }
+
+  .set {
+    margin-bottom: 1em;
+    margin-left: 0.4em;
+  }
+
+  .box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .box img {
+    height: 540px;
+    width: 95%;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .nav-items a {
+    font-size: 1.1em;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}

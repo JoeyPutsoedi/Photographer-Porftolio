@@ -1,0 +1,444 @@
+/*-----------------------Fonts------------------------------*/
+@font-face {
+  font-family: coco;
+  src: url(Gotham/Gotham-Medium.otf);
+}
+
+@font-face {
+  font-family: AlteB;
+  src: url(Gotham/AlteHaasGroteskBold.ttf);
+}
+
+@font-face {
+  font-family: Alte;
+  src: url(Gotham/AlteHaasGroteskRegular.ttf);
+}
+@font-face {
+  font-family: goth;
+  src: url(Gotham/Gotham-Black.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: coco;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+/*------------------Navigation bar---------------------*/
+.navigation {
+  height: 3em;
+  width: 100%;
+}
+nav {
+  background-color: #e3e3e3;
+  padding: 0.5em 1em 2em 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+nav a {
+  font-size: 14px;
+}
+
+.menu-icon {
+  color: #000;
+  display: none;
+}
+
+#logo {
+  letter-spacing: 1px;
+  font-weight: 1000;
+  font-size: 16px;
+}
+.nav-items {
+  opacity: 1;
+  color: #000;
+}
+.nav-items a {
+  padding-left: 50px;
+}
+
+/*------------------ Hero Section--------------------*/
+.cpp {
+  margin: 15px 0 0 15px;
+  display: flex;
+  gap: 1em;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.box {
+  height: 550px;
+  width: 405px;
+}
+
+.box img {
+  height: 550px;
+  width: 405px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: 0.7s;
+}
+
+.box1 {
+  position: relative;
+  color: #000;
+  font-size: 45px;
+  text-align: end;
+  height: 500px;
+  width: 380px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.box1 p {
+  position: absolute;
+  right: 0;
+  padding: 0.6em 1.6em;
+  border: 2px solid #737373;
+  border-radius: 4.95em;
+  font-size: 13px;
+  color: #737373;
+  width: 150px;
+  text-align: left;
+  transition: 0.4s;
+}
+
+.box1 p:hover {
+  color: #e3e3e3;
+  background-color: #000;
+  border: 2px solid #000;
+}
+
+.fa-arrow-right {
+  margin-left: 0.5em;
+}
+
+.box1 a {
+  text-decoration: none;
+}
+/*----------------------about-----------------------*/
+.aboutCont {
+  padding-top: 0.8em;
+}
+h2 {
+  font-family: goth;
+  margin-bottom: 1.3em;
+}
+
+.about-me {
+  position: relative;
+  height: 630px;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+.about-field {
+  height: 500px;
+  font-family: sans-serif;
+  margin-bottom: 1em;
+  width: 95vw;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "box1 box2 box3"
+    "box1 box2 box3"
+    "box4 box2 box5";
+}
+
+.gridItem {
+  padding: 0.5em 1em;
+  display: flex;
+  flex-direction: column;
+  /* border: 0.1px solid rgba(40, 40, 40, 0.200); */
+}
+
+.grid-item1 {
+  grid-area: box1;
+}
+
+.grid-item1 {
+  font-size: 14px;
+}
+
+.grid-item2 {
+  grid-area: box2;
+}
+
+.grid-item2 img {
+  object-fit: cover;
+  width: 400px;
+  height: 500px;
+  border-top-left-radius: 11.75em;
+  border-top-right-radius: 11.75em;
+  outline-offset: 12px;
+  outline: 2px dashed #000;
+}
+
+.grid-item3 {
+  grid-area: box3;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.3em;
+}
+
+.grid-item3 p {
+  font-size: 13px;
+  text-align: center;
+  width: 130px;
+  padding: 0.3em 0.6em;
+  border: 1px solid #000;
+  border-radius: 1.75em;
+  align-content: center;
+}
+
+.grid-item4 {
+  grid-area: box4;
+  cursor: pointer;
+  place-items: center;
+  text-align: center;
+}
+
+.brands {
+  width: 150px;
+  font-size: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.aboutBtn:hover {
+  background: #1e1e1e;
+  color: #d5d5d5;
+}
+/*----------------------Contact-----------------------*/
+.contactCont h1 {
+  font-family: AlteB;
+  font-size: 90px;
+  font-weight: bolder;
+  letter-spacing: -9px;
+  margin-left: -30px;
+}
+
+.main-form {
+  position: absolute;
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+}
+
+.left-col {
+  position: relative;
+  flex: 1;
+  height: 300px;
+}
+
+.right-col {
+  position: relative;
+  flex: 1;
+  border-left: solid 1px #000;
+  padding-left: 1em;
+  display: flex;
+  gap: 1em;
+}
+
+.right-col button {
+  width: 10em;
+  height: 3em;
+  border-radius: 25px;
+  border: solid 1px #000;
+  background: transparent;
+  font-family: Coco;
+  font-weight: 900;
+  font-size: 13px;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+.right-col button:hover {
+  background: #000;
+  color: #e3e3e3;
+}
+
+button:hover .fa-arrow-right {
+  transition: 0.8s;
+  animation: arrow 2s linear infinite;
+}
+
+.right-col textarea {
+  margin-top: 3rem;
+  width: 30em;
+  height: 18em;
+  resize: none;
+}
+
+.contact-inputs {
+  width: 17rem;
+  height: 4em;
+  border: none;
+  border-bottom: solid 1px #000;
+  color: #000;
+  background-color: transparent;
+}
+
+.touch {
+  margin-top: 4rem;
+  font-size: 2rem;
+}
+
+.socials {
+  margin-top: 2em;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.socials p {
+  font-family: coco;
+  font-weight: 900;
+}
+
+.left-col .icons {
+  margin-top: 9px;
+  font-size: 26px;
+}
+
+.icons i {
+  cursor: pointer;
+  padding: 10px;
+  border: solid 2px #000;
+  border-radius: 50px;
+}
+
+.icons a {
+  color: #000;
+}
+
+.icons i:hover {
+  background-color: #000;
+  color: #e3e3e3;
+}
+
+/*----------------------Media queries-----------------------*/
+@media (max-width: 600px) {
+  .nav-items {
+    opacity: 0;
+    z-index: 11;
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 60px;
+    right: 1px;
+    display: flex;
+    flex-direction: column;
+    background-color: #e3e3e3;
+    gap: 2em;
+    pointer-events: none;
+  }
+
+  .nav-items a {
+    font-size: 1.1em;
+  }
+
+  .menu-icon {
+    display: block;
+    color: #000;
+  }
+
+  .cpp {
+    width: 100%;
+    margin: 15px 0 0 0;
+    gap: 0;
+    overflow: hidden;
+  }
+
+  .box1 {
+    text-align: center;
+    font-size: 28px;
+    height: 100px;
+    border-bottom: 1px solid;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .box1 p {
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+  }
+
+  .box {
+    display: none;
+  }
+
+  .box img {
+    display: none;
+    width: 0;
+    object-fit: cover;
+    height: 10px;
+  }
+
+  .weddings {
+    width: 100%;
+    gap: 0;
+    margin: 15px 0 0 0;
+  }
+
+  .graduations {
+    margin: 15px 0 0 0;
+    width: 100%;
+    gap: 0;
+  }
+
+  .events {
+    margin: 15px 0 0 0;
+    width: 100%;
+    gap: 0;
+  }
+
+  .elop {
+    margin: 15px 0 0 0;
+    width: 100%;
+    gap: 0;
+  }
+
+  .studio {
+    margin: 15px 0 0 0;
+    width: 100%;
+    gap: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .box1 {
+    font-size: 24px;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    padding-right: 0;
+  }
+
+  50% {
+    padding-right: 1em;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
