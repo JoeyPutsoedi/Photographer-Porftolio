@@ -1,12 +1,32 @@
-# React + Vite
+# Creative Rori Portfolio
+Creative Rori Portfolio
+<h1>Description</h1>
+<p>An Elegant desgin that complements the Photographer's style and show cases his beautiful work<br>
+</p>
+<h1>Languages and Utilities</h1>
+<ul>
+  <li>ReactJs</li>
+  <li>CSS</li>
+  <li>Cloudinary</li>
+</ul>
+<h1>Environment Used</h1>
+<ul>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <li>Windows 10</li>
+  <li>Visual Studio Code</li>
+</ul>
+<h2> Live Demo: </h2>
+https://fivestarquestionnairee.netlify.app/
 
-Currently, two official plugins are available:
+<p>Responsive To Mobile</p>
+<h2>Complete Walkthrough On Youtube:</h2>
+<h3 font-size="30px"><a href="https://youtu.be/4ryEIU2y5po?si=DfLCOkklTYeJ94wY">CLICK ME :)</a></h3>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>DISCLAIMER: </h2>
+<p>NO AI OR TEMPLATES WERE USED IN THE CREATION OF THIS PROJECT</p>
+<p align="center"> SCREENSHOTS: </p>
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<img width="1366" height="768" alt="Screenshot (53)" src="https://github.com/user-attachments/assets/619f082f-7d24-487a-a4b1-60fcd0f09e7b" />
+<img width="1366" height="768" alt="Screenshot (54)" src="https://github.com/user-attachments/assets/f92640db-d63d-4b32-9896-3f52e2959321" />
+<img width="1366" height="768" alt="Screenshot (55)" src="https://github.com/user-attachments/assets/f143d0ee-a223-472d-b809-afb174bc34df" />
+<img width="1366" height="768" alt="Screenshot (52)" src="https://github.com/user-attachments/assets/ca8ee08c-96d6-4d28-8d74-80715b3f3f04" />
