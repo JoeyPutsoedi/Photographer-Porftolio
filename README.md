@@ -10,7 +10,8 @@ Creative Rori Portfolio
   <li>Cloudinary</li>
 </ul>
 <h1>Environment Used</h1>
-<ul>
+<ul><img width="1366" height="768" alt="Screenshot (55)" src="https://github.com/user-attachments/assets/f610ef2f-d02d-4cba-8b92-f7d85e8fe1c7" />
+
   <li>Windows 10</li>
   <li>Visual Studio Code</li>
 </ul>
@@ -25,6 +26,7 @@ https://fivestarquestionnairee.netlify.app/
 <p>NO AI OR TEMPLATES WERE USED IN THE CREATION OF THIS PROJECT</p>
 <p align="center"> SCREENSHOTS: </p>
 
-<img width="1366" height="768" alt="Screenshot (66)" src="https://github.com/user-attachments/assets/98b5b029-dddd-474e-b201-eaada9e751af" />
-<img width="1366" height="768" alt="Screenshot (65)" src="https://github.com/user-attachments/assets/020c993f-0ff2-42a3-996b-4ec3cb6a41a6" />
-<img width="1366" height="768" alt="Screenshot (64)" src="https://github.com/user-attachments/assets/fbba9943-fe42-481e-907e-d7b0f9453951" />
+<img width="1366" height="768" alt="Screenshot (53)" src="https://github.com/user-attachments/assets/619f082f-7d24-487a-a4b1-60fcd0f09e7b" />
+<img width="1366" height="768" alt="Screenshot (54)" src="https://github.com/user-attachments/assets/f92640db-d63d-4b32-9896-3f52e2959321" />
+<img width="1366" height="768" alt="Screenshot (55)" src="https://github.com/user-attachments/assets/f143d0ee-a223-472d-b809-afb174bc34df" />
+<img width="1366" height="768" alt="Screenshot (52)" src="https://github.com/user-attachments/assets/ca8ee08c-96d6-4d28-8d74-80715b3f3f04" />
