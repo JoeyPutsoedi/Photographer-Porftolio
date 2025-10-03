@@ -13,6 +13,9 @@ const Navbar = () => {
           <Link to="/" id="Contact">
             Home
           </Link>
+          <Link to="/Gallery" id="Contact">
+            Photos
+          </Link>
           <Link to="/Videos" id="Contact">
             Video
           </Link>
