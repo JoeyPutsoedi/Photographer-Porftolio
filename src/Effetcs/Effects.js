@@ -19,10 +19,9 @@ export const useLandingEffects = () => {
 
         containerRef.current.style.transition = "0.4s";
         containerRef.current.style.backgroundColor = "#0d0d0d";
-        containerRef.current.style.color = "#878787";
 
         placeholderRef.current.style.transition = "0.4s";
-        placeholderRef.current.style.color = "#878787";
+
         placeholderRef.current.textContent = event.target.textContent;
       });
 
@@ -30,10 +29,8 @@ export const useLandingEffects = () => {
         if (!containerRef.current || !placeholderRef.current) return;
 
         containerRef.current.style.backgroundColor = "#e3e3e3";
-        containerRef.current.style.color = "#000";
 
-        placeholderRef.current.style.color = "#000";
-        placeholderRef.current.textContent = "CREATIVEORI";
+        placeholderRef.current.textContent = "CREATIVERORI";
       });
     });
 

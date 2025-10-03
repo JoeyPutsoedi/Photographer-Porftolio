@@ -17,11 +17,12 @@ import Graduations from "./Pages/Graduations";
 import Elopment from "./Pages/Elopment";
 import Events from "./Pages/Events.jsx";
 import Studio from "./Pages/Studio";
+import AnimatedRoutes from "./Components/AnimatedRoutes.jsx";
 import "./fontawesome/css/all.min.css";
 import "./boxicons/css/boxicons.css";
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <>
+    <Route element={<AnimatedRoutes />}>
       <Route element={<DefaultLayout />}>
         <Route path="/" element={<LandingPage />} />
         <Route path="/Gallery" element={<GalleryPage />} />
@@ -38,7 +39,7 @@ const router = createBrowserRouter(
         <Route path="/Events" element={<Events />} />
         <Route path="/Studio" element={<Studio />} />
       </Route>
-    </>
+    </Route>
   )
 );
 const App = () => {
