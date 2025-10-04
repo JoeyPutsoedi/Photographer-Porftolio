@@ -1,0 +1,121 @@
+@media (max-width: 450px) {
+  .contactCont h1 {
+    margin-top: 0.6em;
+    line-height: 68px;
+    font-size: 82px;
+  }
+
+  .main-form {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .contact-inputs {
+    width: 14em;
+  }
+
+  .right-col textarea {
+    height: 14em;
+    width: 26em;
+  }
+
+  .right-col {
+    margin-top: 1.7em;
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .socials p {
+    font-size: 0.6em;
+    color: #000;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  .right-col {
+    margin-top: 2em;
+  }
+  .right-col button {
+    color: #000;
+  }
+
+  /*---------------------ABOUT ME-------------------*/
+  .about-field {
+    display: grid;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      "box1 "
+      "box2 "
+      "box3 "
+      "box4 "
+      "box5 ";
+    gap: 1em;
+  }
+
+  .grid-item1 {
+    font-size: 11px;
+  }
+
+  .grid-item2 {
+    place-items: center;
+  }
+
+  .grid-item2 img {
+    object-fit: cover;
+    width: 200px;
+    height: 300px;
+    border-top-left-radius: 11.75em;
+    border-top-right-radius: 11.75em;
+    outline-offset: 12px;
+    outline: 2px dashed #000;
+    -moz-outline-radius-topleft: 11.75em;
+    -moz-outline-radius-topright: 11.75em;
+  }
+
+  .skills {
+    font-size: 11px;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .aboutCont h1 {
+    font-size: 65px;
+    letter-spacing: -0.5;
+    margin-left: -15px;
+  }
+  .brands {
+    font-size: 1.6em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@keyframes arrow {
+  0% {
+    padding-right: 0;
+  }
+
+  50% {
+    padding-right: 1em;
+  }
+
+  100% {
+    padding-right: 0;
+  }
+}
+/*-------------VIDEO----------------*/
+@media (max-width: 400px) {
+  .vidPlaceholder {
+    width: 350px;
+  }
+
+  .foot {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    height: 100px;
+    width: 200px;
+    object-fit: cover;
+  }
+}

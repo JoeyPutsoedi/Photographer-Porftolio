@@ -65,7 +65,6 @@ const ContactPage = () => {
               ></textarea>
               <br />
               <button type="submit">
-                {" "}
                 Submit <i className="fa-solid fa-arrow-right"></i>
               </button>
             </form>

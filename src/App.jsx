@@ -20,6 +20,7 @@ import Studio from "./Pages/Studio";
 import AnimatedRoutes from "./Components/AnimatedRoutes.jsx";
 import "./fontawesome/css/all.min.css";
 import "./boxicons/css/boxicons.css";
+import "./Styles/Mediaqueries.css";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<AnimatedRoutes />}>
