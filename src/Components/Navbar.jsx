@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <section className="navigation">
       <nav>
@@ -9,7 +14,7 @@ const Navbar = () => {
             CREATIVE RORI
           </Link>
         </section>
-        <section className="nav-items">
+        <section className={`nav-items ${isOpen ? "open" : " "}`}>
           <Link to="/" id="Contact">
             Home
           </Link>
@@ -28,7 +33,7 @@ const Navbar = () => {
         </section>
 
         <div className="menu-icon">
-          {/* <i className="fa-solid fa-bars" onClick="toggleMenu()"></i> */}
+          <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
         </div>
       </nav>
     </section>

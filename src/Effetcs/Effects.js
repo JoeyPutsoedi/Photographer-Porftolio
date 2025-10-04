@@ -44,41 +44,7 @@ export const useLandingEffects = () => {
 
   return { containerRef, placeholderRef, subHeaderRef };
 };
-
-// const subHeaders = [
-//   "Photo Direction. Videography. Art.",
-//   "Videography. Art. Photo Direction. ",
-//   "Creative Powerhouse.",
-// ];
-
-// const obtains = document.querySelectorAll("#item-1, #item-2, #item-3, #item-4");
-// const placeHolder = document.querySelector(".placeholder");
-// const subheader = document.querySelector("#subheader");
-// const container = document.querySelector(".body");
-
-// obtains.forEach((item) => {
-//   item.addEventListener("mouseover", (event) => {
-//     container.style.transition = "0.4s";
-//     placeHolder.style.transition = "0.4s";
-//     container.style.backgroundColor = "#0d0d0d";
-//     container.style.color = "#878787";
-//     placeHolder.style.color = "#878787";
-//     placeHolder.textContent = event.target.textContent;
-//   });
-//   item.addEventListener("mouseout", (event) => {
-//     container.style.backgroundColor = "#e3e3e3";
-//     container.style.color = "#000";
-//     placeHolder.style.color = "#000";
-//     placeHolder.textContent = "CREATIVE RORI";
-//   });
-// });
-// const openMenu = document.querySelector(".open");
 // let menuList = document.querySelector("#menuList");
-// const closeMenu = document.querySelector("#close-menu");
-
-// const mainVideo = document.querySelector(".vidPlaceholder");
-// const videoList = document.querySelectorAll(".footVid");
-// const menu = document.querySelector(".set2Vid");
 // function toggleMenu() {
 //   if (menuList.style.opacity == "0") {
 //     menuList.style.transition = "0.3s";
@@ -89,18 +55,3 @@ export const useLandingEffects = () => {
 //     menuList.style.opacity = "0";
 //   }
 // }
-
-// videoList.forEach((item) => {
-//   item.addEventListener("click", (event) => {
-//     mainVideo.src = event.target.src;
-//   });
-// });
-
-// openMenu.onclick = () => {
-//   menu.classList.add("active");
-// };
-// //Close Cart
-// openMenu.ondblclick = () => {
-//   menu.classList.remove("active");
-
-// };
