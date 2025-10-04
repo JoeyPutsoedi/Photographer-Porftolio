@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import editorialStyles from "../Styles/GallerySecs.module.css";
 const NavbarB = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <nav className={editorialStyles.nav}>
       <section>
@@ -9,7 +13,11 @@ const NavbarB = () => {
           CREATIVE RORI
         </Link>
       </section>
-      <section className={editorialStyles.navItems}>
+      <section
+        className={`${editorialStyles.navItems} ${
+          isOpen ? editorialStyles.open : ""
+        }`}
+      >
         <Link to="/" id="Contact">
           Home
         </Link>
@@ -27,8 +35,8 @@ const NavbarB = () => {
         </Link>
       </section>
 
-      <div className="menu-icon">
-        {/* <i className="fa-solid fa-bars" onClick="toggleMenu()"></i> */}
+      <div className={editorialStyles.menuIcon}>
+        <i className="fa-solid fa-bars" onClick={toggleMenu}></i>
       </div>
     </nav>
   );

@@ -26,6 +26,7 @@
 
 html,
 body {
+  background-color: rgb(227, 227, 227);
   font-family: coco;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -316,6 +317,9 @@ button:hover .fa-arrow-right {
 .left-col .icons {
   margin-top: 9px;
   font-size: 26px;
+  display: flex;
+
+  gap: 0.3em;
 }
 
 .icons i {
@@ -363,6 +367,7 @@ button:hover .fa-arrow-right {
   }
 
   .menu-icon {
+    margin-top: -1.8em;
     display: block;
     color: #000;
   }

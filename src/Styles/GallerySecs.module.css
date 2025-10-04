@@ -44,7 +44,7 @@
   font-size: 14px;
 }
 
-.menu-icon {
+.menuIcon {
   color: white;
   display: none;
 }
@@ -71,6 +71,7 @@
   cursor: pointer;
   margin-left: 1em;
   font-size: 0.8em;
+  color: white;
 }
 
 .back i {
@@ -90,6 +91,7 @@ a {
   scroll-behavior: smooth;
   margin-left: 1em;
   margin-right: 1em;
+  margin-bottom: 3em;
 }
 
 .box img {
@@ -186,23 +188,32 @@ a {
     overflow-x: hidden;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 1em;
   }
 
-  .nav-items {
+  .navItems {
     opacity: 0;
     z-index: 11;
     position: absolute;
-    height: 200px;
-    width: 200px;
+    height: auto;
+    width: 140px;
+    font-size: 12px;
     top: 60px;
-    right: 1px;
+    right: 2px;
     display: flex;
     flex-direction: column;
-    background-color: #000;
-    gap: 2em;
+    color: white;
+    background-color: black;
+    gap: 2.2em;
     pointer-events: none;
+    padding: 1em 2.5em 1em 0;
+    box-shadow: -5px 2px 2px rgba(255, 255, 255, 0.1);
+    transition: 0.4s;
   }
-
+  .navItems.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
   .set {
     margin-bottom: 1em;
     margin-left: 0.4em;
@@ -224,8 +235,39 @@ a {
   .nav-items a {
     font-size: 1.1em;
   }
-
-  .menu-icon {
+  .menuIcon {
+    margin-top: -1.8em;
     display: block;
+    color: white;
+  }
+}
+/*--------------------------------VIDEO----------------------------------*/
+@media (max-width: 800px) {
+  .vidPlaceholder {
+    width: 400px;
+  }
+}
+@media (max-width: 500px) {
+  .vidPlaceholder {
+    width: 290px;
+  }
+
+  .foot {
+    margin-bottom: 2em;
+    height: 100px;
+    width: 200px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 400px) {
+  .vidPlaceholder {
+    width: 270px;
+  }
+
+  .foot {
+    margin-bottom: 2em;
+    height: 100px;
+    width: 200px;
+    object-fit: cover;
   }
 }
