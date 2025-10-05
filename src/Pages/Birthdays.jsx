@@ -9,6 +9,7 @@ import IMG4 from "../Images/BIRTHDAYS/img4.jpg";
 import IMG5 from "../Images/BIRTHDAYS/img5.jpg";
 import IMG6 from "../Images/BIRTHDAYS/img6.jpg";
 import IMG7 from "../Images/BIRTHDAYS/img7.jpg";
+
 const Birthdays = () => {
   return (
     <div className={editorialStyles.body}>
