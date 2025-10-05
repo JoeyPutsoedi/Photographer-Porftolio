@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import editorialStyles from "../Styles/GallerySecs.module.css";
 import { Link } from "react-router-dom";
+import FocusOverlay from "../Components/CameraFocusCursor";
 const Secs = ({ images = [] }) => {
   return (
     <>
+      <FocusOverlay />
       <div className={editorialStyles.secs}>
         <Link to="/Gallery" className={editorialStyles.back}>
           <i className="fa fa-arrow-left"></i> Back

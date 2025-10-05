@@ -1,0 +1,56 @@
+.camera-cursor {
+  position: fixed;
+  top: -15px;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference; /* makes it visible on both dark/light backgrounds */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reticle {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.25s ease;
+}
+
+.reticle .corner {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border: 1.5px solid white;
+}
+
+.reticle .tl {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.reticle .tr {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+.reticle .bl {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+.reticle .br {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.camera-cursor.hover .reticle {
+  transform: scale(2);
+}

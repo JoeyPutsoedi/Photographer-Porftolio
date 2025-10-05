@@ -13,6 +13,7 @@ import birthdayVid from "../video/BTS Birthday Shoot.mp4";
 import studioVid from "../video/BTS Studio.mp4";
 import btsVid from "../video/Red Phoenix.mp4";
 import { useRef } from "react";
+import FocusOverlay from "../Components/CameraFocusCursor";
 const VideosPage = () => {
   const mainVideoRef = useRef(null);
 
@@ -21,6 +22,7 @@ const VideosPage = () => {
   };
   return (
     <>
+      <FocusOverlay />
       {/* --------------------------Navbar-------------------------- */}
       <NavbarB />
       <div className={editorialStyles.contentsVid}>

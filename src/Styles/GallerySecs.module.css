@@ -66,12 +66,14 @@
 .secs {
   min-height: 100vh;
   padding-top: 3.7em;
+  overflow-x: scroll;
 }
 .back {
   cursor: pointer;
   margin-left: 1em;
   font-size: 0.8em;
   color: white;
+  position: absolute;
 }
 
 .back i {
@@ -84,14 +86,12 @@ a {
 }
 
 .set {
-  margin-top: 1em;
+  margin-top: 2em;
   display: flex;
   gap: 1em;
-  overflow-x: scroll;
   scroll-behavior: smooth;
   margin-left: 1em;
   margin-right: 1em;
-  margin-bottom: 3em;
 }
 
 .box img {
@@ -131,8 +131,6 @@ a {
 .set2Vid {
   margin: -1em 1em 0em 1em;
   height: 100%;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
 }
 
 .uppercolVid {
@@ -180,10 +178,6 @@ a {
 
 /*----------------------Media queries-----------------------*/
 @media (max-width: 600px) {
-  body {
-    overflow-y: scroll;
-  }
-
   .set {
     overflow-x: hidden;
     display: grid;

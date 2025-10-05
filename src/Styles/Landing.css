@@ -27,7 +27,6 @@
 
 html,
 body {
-  overflow: hidden;
   font-family: coco;
   text-transform: uppercase;
   width: 100vw;
