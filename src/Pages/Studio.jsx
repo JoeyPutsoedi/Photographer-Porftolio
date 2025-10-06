@@ -14,7 +14,7 @@ const Studio = () => {
       <div>
         <div className={editorialStyles.body}>
           <NavbarB />
-          <Secs images={[IMG2, IMG3, IMG1, IMG6, IMG4, IMG5]} />
+          <Secs images={[IMG2, IMG3, IMG1, IMG6, IMG4, IMG4, IMG5]} />
         </div>
       </div>
     </div>

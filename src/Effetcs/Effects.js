@@ -20,14 +20,14 @@ export const useLandingEffects = () => {
         containerRef.current.style.transition = "0.4s";
         containerRef.current.style.backgroundColor = "#0d0d0d";
 
-        placeholderRef.current.textContent.style.transition = "0.5s";
+        placeholderRef.current.style.transition = "0.4s";
 
         placeholderRef.current.textContent = event.target.textContent;
       });
 
       item.addEventListener("mouseout", () => {
         if (!containerRef.current || !placeholderRef.current) return;
-        placeholderRef.current.style.transition = "0.5s";
+
         containerRef.current.style.backgroundColor = "#e3e3e3";
 
         placeholderRef.current.textContent = "CREATIVERORI";
