@@ -43,7 +43,7 @@ const LandingPage = () => {
             {placeholder}
           </div>
           <p id="subheader" ref={subHeaderRef}>
-            <a href="register.html">Art. Photo Direction. Videography</a>
+            <Link to="/Login">Art. Photo Direction. Videography</Link>
           </p>
         </div>
       </div>
