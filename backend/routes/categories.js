@@ -1,30 +1,28 @@
 import express from "express";
-
+import multer from "multer";
+import {
+  createCategory,
+  deleteCategory,
+  getCategory,
+} from "../Controllers/categoryControllers.js";
 //create express app
 const app = express();
 
 //create express router
 const router = express.Router();
 
+//multer setup for parsing file uploads
+const storage = multer.memoryStorage();
+const upload = multer({ storage });
+//ROUTES------------------------------------------------------
 //Get all Categories
-router.get("/", (req, res) => {
-  res.json({ mssg: "This is a category" });
-});
-
-//get a single Category
-router.get("/:id", (req, res) => {
-  res.json({ mssg: "This is a single category" });
-});
+router.get("/", getCategory);
 
 //Create a new category
-router.post("/", (req, res) => {
-  res.json({ mssg: "Create a new Category" });
-});
+router.post("/", upload.array("thumbnails", 2), createCategory);
 
 //Delete a Category
-router.delete("/:id", (req, res) => {
-  res.json({ mssg: "Delete a Category" });
-});
+router.delete("/:id", deleteCategory);
 
 //Update a Category
 router.patch("/:id", (req, res) => {

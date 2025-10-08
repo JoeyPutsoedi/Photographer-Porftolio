@@ -1,15 +1,13 @@
-import mongoose from "moongoose";
+import mongoose from "mongoose";
 
-const Schema = mongoose.Schema();
-
-const adminSchema = new Schema(
+const adminSchema = new mongoose.Schema(
   {
     username: {
-      type: string,
+      type: String,
       require: true,
     },
     password: {
-      type: string,
+      type: String,
       require: true,
     },
   },
