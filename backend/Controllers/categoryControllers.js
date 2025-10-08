@@ -1,4 +1,4 @@
-import Category from "../Models/categoryModel";
+import Category from "../Models/categoryModel.js";
 
 //get categories------------------------------------------------------------------------
 export const getCategory = async (req, res) => {
@@ -51,3 +51,4 @@ export const deleteCategory = async (req, res) => {
   res.json({ message: "Category Deleted" });
 };
 //update a category
+// export const upadateCategory = async (req, res) => {};
