@@ -1,5 +1,5 @@
 import express from "express";
-import mongooose from "mongoose";
+import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import categoryRoutes from "../backend/routes/categories.js";
@@ -20,7 +20,15 @@ app.use((req, res, next) => {
 //backend routes
 app.use("/api/categories", categoryRoutes);
 
-//Listen for Requests
-app.listen(process.env.PORT, () => {
-  console.log("Listening on port", process.env.PORT);
-});
+//Connect to mongo DB
+mongoose
+  .connect(process.env.MONG_URI)
+  .then(() => {
+    //Listen for Requests
+    app.listen(process.env.PORT, () => {
+      console.log("Connected to Db & Listening on port", process.env.PORT);
+    });
+  })
+  .catch((error) => {
+    console.log(error);
+  });
