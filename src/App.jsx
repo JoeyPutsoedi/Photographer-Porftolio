@@ -19,6 +19,7 @@ import Events from "./Pages/Events.jsx";
 import Studio from "./Pages/Studio";
 import AnimatedRoutes from "./Components/AnimatedRoutes.jsx";
 import LoginPage from "./Pages/LoginPage.jsx";
+import Admin from "./Admin/Admin.jsx";
 import "./fontawesome/css/all.min.css";
 import "./boxicons/css/boxicons.css";
 import "./Styles/Mediaqueries.css";
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
         <Route path="/Contact" element={<ContactPage />} />
         <Route path="/About" element={<AboutPage />} />
         <Route path="/Login" element={<LoginPage />} />
+        <Route path="/Admin" element={<Admin />} />
       </Route>
 
       <Route element={<DarkLayout />}>
