@@ -1,7 +1,9 @@
-import Image from "../Models/imageModel";
-import Category from "../Models/categoryModel";
+import Image from "../Models/imageModel.js";
+import Category from "../Models/categoryModel.js";
+import { uploadToCloudinary } from "../Config/Cloudinary.js";
+
 //get images------------------------------------------------------
-export const getImagesByCategory = async (req, res) => {
+export const getImages = async (req, res) => {
   try {
     const category = await Category.findOne({
       title: req.params.categoryTitle,
@@ -14,32 +16,22 @@ export const getImagesByCategory = async (req, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
 //post an image---------------------------------------------------
-export const addImage = async (re, res) => {
+export const addImage = async (req, res) => {
   try {
-    const { categoryTitle, description } = req.body;
+    const { categoryTitle } = req.body;
+    if (!req.file) return res.status(400).json({ error: "No image uploaded" });
 
     const category = await Category.findOne({ title: categoryTitle });
     if (!category) return res.status(404).json({ error: "Category not found" });
 
-    const uploadToCloudinary = () =>
-      new Promise((resolve, reject) => {
-        const stream = cloudinary.uploader.upload_stream(
-          { folder: `portfolio/${categoryTitle}` },
-          (error, result) => {
-            if (error) reject(error);
-            else resolve(result.secure_url);
-          }
-        );
-        stream.end(req.file.buffer);
-      });
-
-    const imageUrl = await uploadToCloudinary();
+    // Upload image to Cloudinary
+    const imageUrl = await uploadToCloudinary(req.file.buffer);
 
     const image = new Image({
       category: category._id,
       imageUrl,
-      description,
     });
 
     await image.save();
@@ -48,8 +40,9 @@ export const addImage = async (re, res) => {
     res.status(500).json({ error: err.message });
   }
 };
+
 //delete an image------------------------------------------------
 export const deleteImage = async (req, res) => {
-  await Image.findByIdandDelete(req.params.id);
+  await Image.findByIdAndDelete(req.params.id);
   res.json({ message: "image Deleted" });
 };

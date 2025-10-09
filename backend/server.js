@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import categoryRoutes from "../backend/routes/categories.js";
+import imageRoutes from "../backend/routes/images.js";
 
 //oonfigure .env file to gain access to it's contents
 dotenv.config();
@@ -15,10 +16,11 @@ const app = express();
 app.use(
   cors({
     origin: "http://localhost:3000",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 app.use((req, res, next) => {
   console.log(req.path);
@@ -27,7 +29,7 @@ app.use((req, res, next) => {
 
 //backend routes
 app.use("/api/categories", categoryRoutes);
-
+app.use("/api/images", imageRoutes);
 //Connect to mongo DB
 mongoose
   .connect(process.env.MONG_URI)

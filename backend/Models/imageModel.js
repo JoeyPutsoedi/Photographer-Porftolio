@@ -1,8 +1,6 @@
 import mongoose from "mongoose";
 
-const Schema = mongoose.Schema();
-
-const imageSchema = new Schema(
+const imageSchema = mongoose.Schema(
   {
     category: {
       type: mongoose.Schema.Types.ObjectId,

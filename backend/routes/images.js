@@ -1,17 +1,18 @@
 import express from "express";
+import upload from "../Config/multer.js";
 import {
   addImage,
   deleteImage,
-  getImagesByCategory,
-} from "../Controllers/imageController";
+  getImages,
+} from "../Controllers/imageController.js";
 
 const router = express.Router();
 
 //Get images
-router.get("/:categoryTitle", getImagesByCategory);
+router.get("/:categoryTitle", getImages);
 
 //Upload an image
-router.post("/", addImage);
+router.post("/", upload.single("image"), addImage);
 
 //Delete an image
 router.delete("/:id", deleteImage);
