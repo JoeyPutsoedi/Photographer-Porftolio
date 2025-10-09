@@ -20,6 +20,7 @@ import Studio from "./Pages/Studio";
 import AnimatedRoutes from "./Components/AnimatedRoutes.jsx";
 import LoginPage from "./Pages/LoginPage.jsx";
 import Admin from "./Admin/Admin.jsx";
+import CategoryGallery from "./Components/CategoryGallery.jsx";
 import "./fontawesome/css/all.min.css";
 import "./boxicons/css/boxicons.css";
 import "./Styles/Mediaqueries.css";
@@ -44,6 +45,7 @@ const router = createBrowserRouter(
         <Route path="/Elopment" element={<Elopment />} />
         <Route path="/Events" element={<Events />} />
         <Route path="/Studio" element={<Studio />} />
+        <Route path="/gallery/:categoryTitle" element={<CategoryGallery />} />
       </Route>
     </Route>
   )
