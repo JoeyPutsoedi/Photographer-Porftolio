@@ -1,15 +1,16 @@
 import CategoryForm from "./categoryForm";
-import PhotoForm from "./photoForm";
-import Navbar from "../Components/Navbar";
+import AdminNavBar from "./AdminNavBar";
+
 import "../Styles/Admin.css";
-const Admin = () => {
+
+const AdminCategories = () => {
   return (
     <div className="Admin-wrapper">
-      <Navbar />
+      <AdminNavBar />
       <CategoryForm />
       {/* <PhotoForm /> */}
     </div>
   );
 };
 
-export default Admin;
+export default AdminCategories;
