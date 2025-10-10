@@ -7,7 +7,7 @@ const Admin = () => {
     <div className="Admin-wrapper">
       <Navbar />
       <CategoryForm />
-      <PhotoForm />
+      {/* <PhotoForm /> */}
     </div>
   );
 };

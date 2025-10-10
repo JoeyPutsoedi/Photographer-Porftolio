@@ -17,7 +17,7 @@ import Navbar from "../Components/Navbar";
 
 const GalleryPage = () => {
   return (
-    <>
+    <div className="gallery-container">
       <Navbar />
       <GallerySec
         img1={img1}
@@ -25,27 +25,7 @@ const GalleryPage = () => {
         title={"CREATIVE EDITORIALS"}
         ref="/Editorials"
       />
-      <GallerySec
-        img1={img3}
-        img2={img4}
-        title={"BIRTHDAYS"}
-        ref="/Birthdays"
-      />
-      <GallerySec
-        img1={img5}
-        img2={img6}
-        title={"GRADUATIONS"}
-        ref="/Graduations"
-      />
-      <GallerySec
-        img1={img7}
-        img2={img8}
-        title={"ELOPMENT SHOOTS"}
-        ref="/Elopment"
-      />
-      <GallerySec img1={img9} img2={img10} title={"EVENTS"} ref="/Events" />
-      <GallerySec img1={img11} img2={img12} title={"STUDIO"} ref="/Studio" />
-    </>
+    </div>
   );
 };
 
