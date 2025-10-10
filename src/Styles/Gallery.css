@@ -35,6 +35,8 @@ body {
 .navigation {
   height: 3em;
   width: 100%;
+  position: fixed;
+  z-index: 999999;
 }
 nav {
   background-color: #e3e3e3;
@@ -71,6 +73,15 @@ nav a {
 }
 
 /*------------------ Hero Section--------------------*/
+.gallery-container {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+}
+.gallery-wrapper {
+  position: relative;
+  padding-top: 4em;
+}
 .cpp {
   margin: 15px 0 0 15px;
   display: flex;
@@ -78,20 +89,6 @@ nav a {
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
-
-.box {
-  height: 550px;
-  width: 405px;
-}
-
-.box img {
-  height: 550px;
-  width: 405px;
-  object-fit: cover;
-  border-radius: 6px;
-  transition: 0.7s;
-}
-
 .box1 {
   position: relative;
   color: #000;
@@ -101,6 +98,20 @@ nav a {
   width: 380px;
   cursor: pointer;
   border-radius: 6px;
+}
+
+.box {
+  height: 550px;
+  width: 405px;
+  margin-top: 0.5em;
+}
+
+.box img {
+  height: 550px;
+  width: 405px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: 0.7s;
 }
 
 .box1 p {

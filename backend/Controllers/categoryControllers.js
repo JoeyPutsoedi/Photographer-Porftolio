@@ -3,7 +3,7 @@ import { uploadToCloudinary } from "../Config/Cloudinary.js";
 
 //get categories------------------------------------------------------------------------
 export const getCategory = async (req, res) => {
-  const categories = await Category.find().sort({ createdAt: -1 });
+  const categories = await Category.find().sort({ title: 1 });
   res.json(categories);
 };
 

@@ -1,6 +1,11 @@
 .Admin-wrapper {
   width: 100vw;
   height: 100vh;
+}
+.categories-wrapper {
+  width: inherit;
+  height: inherit;
+  padding-top: 4em;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -8,12 +13,24 @@
   gap: 2em;
 }
 
+.categories-cont {
+  width: inherit;
+  height: inherit;
+  /* background-color: aqua; */
+
+  scroll-behavior: smooth;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+}
 .categoryForm {
-  width: 30em;
+  border: 1px solid black;
+  align-content: center;
+  width: 23em;
   padding: 1em;
   height: 19em;
   border-radius: 1em;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
 }
 .categoryForm h2 {
   text-align: center;
@@ -50,6 +67,89 @@
   background-color: rgb(207, 182, 136);
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
 }
+/*Category Table--------------------------------------------------*/
+table.Table {
+  border: 1px solid black;
+  background-color: #eeeeee;
+  width: 55em;
+  border-collapse: collapse;
+}
+table.Table td,
+table.Table th {
+  border: 1px solid black;
+  padding: 3px 2px;
+}
+table.Table tbody td {
+  padding-left: 0.5em;
+  font-size: 13px;
+  height: 5em;
+  width: auto;
+}
+
+table.Table thead {
+  text-align: center;
+  color: black;
+  height: 2.5em;
+  width: 15em;
+  background-color: rgb(218, 196, 156);
+
+  border-bottom: 1px solid #444444;
+}
+table.Table #title {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 2em;
+  border: 1px solid hsla(0, 0%, 0%, 0.311);
+  border-radius: 0.4em;
+  padding-left: 0.3em;
+}
+table.Table .updateThumbs::-webkit-file-upload-button {
+  border: 1px solid hsla(0, 0%, 0%, 0.311);
+  background: #084cdf;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+table.Table button {
+  font-family: coco;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid hsla(0, 0%, 0%, 0.311);
+  border-radius: 0.75em;
+  color: white;
+  width: 7em;
+  height: 2.5em;
+  cursor: pointer;
+}
+table.Table .update {
+  background-color: rgb(142, 43, 248);
+}
+table.Table .update:hover {
+  transition: 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgb(107, 22, 176);
+}
+table.Table .delete {
+  background-color: rgb(248, 43, 67);
+}
+table.Table .delete:hover {
+  transition: 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgb(217, 46, 66);
+}
+table.Table thead th {
+  font-size: 15px;
+  font-weight: bold;
+
+  border-left: 1px solid #d0e4f5;
+}
+table.Table thead th:first-child {
+  border-left: none;
+}
+
 .photoForm {
   width: 30em;
   padding: 1em;
