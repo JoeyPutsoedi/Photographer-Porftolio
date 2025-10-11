@@ -1,10 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL:
-    import.meta.env.MODE === "development"
-      ? "http://localhost:5000/api"
-      : "https://creativerori-api.onrender.com/",
+  baseURL: "https://creativerori-api.onrender.com/",
 });
 
 //fetch categories
