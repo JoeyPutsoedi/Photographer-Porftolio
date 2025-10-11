@@ -223,11 +223,11 @@ table.Table thead th:first-child {
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
 }
 .picture-display {
-  padding-top: 4em;
   height: inherit;
   overflow-y: auto;
   width: 75%;
-  padding-left: 1em;
+
+  padding: 4em 0 1em 1em;
 }
 
 .imagesDisplayed {
