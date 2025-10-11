@@ -29,5 +29,11 @@ export const addImage = (formData) =>
   });
 
 //fetch image
-export const fetchImage = (categoryTitle) => api.get(`/image/${categoryTitle}`);
+export const fetchImage = (categoryTitle) =>
+  api.get(`/images/${categoryTitle}`);
+
+//delete image
+export const deleteImage = (categoryTitle, id) =>
+  api.delete(`/images/${categoryTitle}/${id}`);
+
 export default api;

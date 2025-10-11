@@ -42,7 +42,6 @@ nav {
   background-color: #e3e3e3;
   padding: 0.5em 1em 2em 1em;
   display: flex;
-  justify-content: space-between;
 }
 
 nav a {
@@ -51,7 +50,7 @@ nav a {
 }
 
 nav a {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .menu-icon {
@@ -62,14 +61,14 @@ nav a {
 #logo {
   letter-spacing: 1px;
   font-weight: 1000;
-  font-size: 16px;
+  font-size: 14px;
 }
 .nav-items {
   opacity: 1;
   color: #000;
 }
 .nav-items a {
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 /*------------------ Hero Section--------------------*/
