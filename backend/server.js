@@ -15,7 +15,11 @@ const app = express();
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://creativerori.vercel.app"],
+    origin: [
+      "http://localhost:3000",
+      "https://creativerori.vercel.app",
+      "https://creativerori-api.onrender.com/",
+    ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
   })
