@@ -1,7 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://creativerori-api.onrender.com/api/",
+  baseURL:
+    window.location.hostname === "localhost"
+      ? "http://localhost:5000/api"
+      : "https://creativerori-api.onrender.com/api",
 });
 
 //fetch categories
