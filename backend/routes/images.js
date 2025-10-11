@@ -15,6 +15,6 @@ router.get("/:categoryTitle", getImages);
 router.post("/", upload.single("image"), addImage);
 
 //Delete an image
-router.delete("/:id", deleteImage);
+router.delete("/:category/:id", deleteImage);
 
 export default router;

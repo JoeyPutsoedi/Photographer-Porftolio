@@ -149,13 +149,19 @@ table.Table thead th {
 table.Table thead th:first-child {
   border-left: none;
 }
-
+/*--------------------------------------------------Photos---------------------------------------------------------*/
+.photos-wrapper {
+  height: inherit;
+  width: inherit;
+  display: flex;
+}
 .photoForm {
-  width: 30em;
+  background-color: rgb(218, 196, 156);
+  align-content: center;
+  width: 25%;
   padding: 1em;
-  height: 19em;
+  height: inherit;
   border-radius: 1em;
-  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
 }
 .photoForm h2 {
   text-align: center;
@@ -173,16 +179,34 @@ table.Table thead th:first-child {
   margin-bottom: 1em;
 }
 .photoForm #title {
-  width: 20em;
+  width: 23em;
   height: 2.5em;
   padding-left: 0.7em;
   border-radius: 0.45em;
   border: 1px solid grey;
 }
+.photoForm .uploadImage {
+  border: 1px solid hsla(0, 0%, 0%, 0.311);
+  background: rgb(241, 235, 223);
+  width: 23em;
+  height: 4em;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+}
+.photoForm .uploadImage::-webkit-file-upload-button {
+  border: 1px solid hsla(0, 0%, 0%, 0.111);
+  background: rgb(129, 113, 81);
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
 .photoForm button {
   display: block;
-  background-color: rgb(218, 196, 156);
-  width: 20em;
+  background-color: rgb(241, 235, 223);
+  width: 23em;
   height: 3em;
   border-radius: 0.45em;
   border: none;
@@ -195,6 +219,46 @@ table.Table thead th:first-child {
 }
 .photoForm button:hover {
   transition: 0.3s;
-  background-color: rgb(207, 182, 136);
+
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
+}
+.picture-display {
+  padding-top: 4em;
+  height: inherit;
+  overflow-y: auto;
+  width: 75%;
+  padding-left: 1em;
+}
+
+.imagesDisplayed {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.5em;
+}
+.picture-display .imagesDisplayed img {
+  height: 18em;
+  width: 15em;
+  object-fit: cover;
+  border-radius: 0.5em;
+}
+.imagesActions img {
+  z-index: 3;
+}
+
+.imagesActions button {
+  z-index: 23333;
+
+  background-color: rgb(248, 43, 67);
+  border: 1px solid hsla(0, 0%, 0%, 0.311);
+  border-radius: 0.75em;
+  color: white;
+  width: 7em;
+  height: 2.5em;
+  cursor: pointer;
+}
+
+.imagesActions button:hover {
+  transition: 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgb(217, 46, 66);
 }

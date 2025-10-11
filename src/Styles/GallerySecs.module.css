@@ -41,7 +41,7 @@
 }
 
 .nav a {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .menuIcon {
@@ -52,14 +52,14 @@
 #logo {
   letter-spacing: 1px;
   font-weight: 1000;
-  font-size: 16px;
+  font-size: 14px;
 }
 .navItems {
   opacity: 1;
   color: white;
 }
 .navItems a {
-  padding-left: 50px;
+  padding-left: 30px;
 }
 
 /*------------Hero Section-----------------------*/

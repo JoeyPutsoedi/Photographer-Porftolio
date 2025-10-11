@@ -15,10 +15,10 @@ const AdminNavBar = () => {
           </Link>
         </section>
         <section className={`nav-items ${isOpen ? "open" : " "}`}>
-          <Link to="/" id="Contact">
+          <Link to="/AdminCategories" id="Contact">
             Categories
           </Link>
-          <Link to="/Gallery" id="Contact">
+          <Link to="/AdminPhotos" id="Contact">
             Photos
           </Link>
           <Link to="/Gallery" id="Contact">

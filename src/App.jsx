@@ -11,15 +11,10 @@ import GalleryPage from "./Pages/GalleryPage";
 import ContactPage from "./Pages/ContactPage";
 import AboutPage from "./Pages/AboutPage";
 import VideosPage from "./Pages/VideosPage";
-import Editorials from "./Pages/Editorials";
-import Birthdays from "./Pages/Birthdays";
-import Graduations from "./Pages/Graduations";
-import Elopment from "./Pages/Elopment";
-import Events from "./Pages/Events.jsx";
-import Studio from "./Pages/Studio";
 import AnimatedRoutes from "./Components/AnimatedRoutes.jsx";
 import LoginPage from "./Pages/LoginPage.jsx";
 import AdminCategories from "./Admin/AdminCategories.jsx";
+import AdminPhotos from "./Admin/AdminPhotos.jsx";
 import CategoryGallery from "./Components/CategoryGallery.jsx";
 import "./fontawesome/css/all.min.css";
 import "./boxicons/css/boxicons.css";
@@ -35,16 +30,12 @@ const router = createBrowserRouter(
         <Route path="/About" element={<AboutPage />} />
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/AdminCategories" element={<AdminCategories />} />
+        <Route path="/AdminPhotos" element={<AdminPhotos />} />
       </Route>
 
       <Route element={<DarkLayout />}>
         <Route path="/Videos" element={<VideosPage />} />
-        <Route path="/Editorials" element={<Editorials />} />
-        <Route path="/Birthdays" element={<Birthdays />} />
-        <Route path="/Graduations" element={<Graduations />} />
-        <Route path="/Elopment" element={<Elopment />} />
-        <Route path="/Events" element={<Events />} />
-        <Route path="/Studio" element={<Studio />} />
+
         <Route path="/gallery/:categoryTitle" element={<CategoryGallery />} />
       </Route>
     </Route>
