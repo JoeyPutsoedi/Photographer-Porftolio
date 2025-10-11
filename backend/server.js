@@ -34,6 +34,9 @@ app.use((req, res, next) => {
 //backend routes
 app.use("/api/categories", categoryRoutes);
 app.use("/api/images", imageRoutes);
+app.get("/", (req, res) => {
+  res.send("API is running!");
+});
 //Connect to mongo DB
 mongoose
   .connect(process.env.MONG_URI)
