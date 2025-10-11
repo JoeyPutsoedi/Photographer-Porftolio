@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import cors from "cors";
 import categoryRoutes from "../backend/routes/categories.js";
 import imageRoutes from "../backend/routes/images.js";
+import videoRoutes from "../backend/routes/video.js";
 
 //oonfigure .env file to gain access to it's contents
 dotenv.config();
@@ -34,9 +35,7 @@ app.use((req, res, next) => {
 //backend routes
 app.use("/api/categories", categoryRoutes);
 app.use("/api/images", imageRoutes);
-app.get("/", (req, res) => {
-  res.send("API is running!");
-});
+app.use("/api/videos", videoRoutes);
 //Connect to mongo DB
 mongoose
   .connect(process.env.MONG_URI)
