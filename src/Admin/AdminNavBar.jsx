@@ -21,7 +21,7 @@ const AdminNavBar = () => {
           <Link to="/AdminPhotos" id="Contact">
             Photos
           </Link>
-          <Link to="/Gallery" id="Contact">
+          <Link to="/AdminVideos" id="Contact">
             Videos
           </Link>
         </section>

@@ -25,18 +25,30 @@ export const updateCategory = (id, formData) =>
     headers: { "Content-Type": "multipart/form-data" },
   });
 
+//fetch image
+export const fetchImage = (categoryTitle) =>
+  api.get(`/images/${categoryTitle}`);
+
 //add image
 export const addImage = (formData) =>
   api.post("/images", formData, {
     headers: { "Content-Type": "multipart/form-data" },
   });
 
-//fetch image
-export const fetchImage = (categoryTitle) =>
-  api.get(`/images/${categoryTitle}`);
-
 //delete image
 export const deleteImage = (categoryTitle, id) =>
   api.delete(`/images/${categoryTitle}/${id}`);
 
+//add video
+export const addVideo = (formData) =>
+  api.post("/video", formData, {
+    headers: { "Content-Type": "multipart/form-data" },
+  });
+
+//fetch videos
+export const fetchVideos = () => api.get("/videos");
+
+//delete video
+
+export const deleteVideo = (id) => api.delete(`/videos/${id}`);
 export default api;

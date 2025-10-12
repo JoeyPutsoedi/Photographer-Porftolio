@@ -15,6 +15,7 @@ import AnimatedRoutes from "./Components/AnimatedRoutes.jsx";
 import LoginPage from "./Pages/LoginPage.jsx";
 import AdminCategories from "./Admin/AdminCategories.jsx";
 import AdminPhotos from "./Admin/AdminPhotos.jsx";
+import AdminVideos from "./Admin/AdminVideos.jsx";
 import CategoryGallery from "./Components/CategoryGallery.jsx";
 import "./fontawesome/css/all.min.css";
 import "./boxicons/css/boxicons.css";
@@ -31,11 +32,11 @@ const router = createBrowserRouter(
         <Route path="/Login" element={<LoginPage />} />
         <Route path="/AdminCategories" element={<AdminCategories />} />
         <Route path="/AdminPhotos" element={<AdminPhotos />} />
+        <Route path="/AdminVideos" element={<AdminVideos />} />
       </Route>
 
       <Route element={<DarkLayout />}>
         <Route path="/Videos" element={<VideosPage />} />
-
         <Route path="/gallery/:categoryTitle" element={<CategoryGallery />} />
       </Route>
     </Route>
