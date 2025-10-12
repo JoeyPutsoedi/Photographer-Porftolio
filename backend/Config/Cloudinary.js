@@ -21,4 +21,16 @@ export const uploadToCloudinary = (fileBuffer) => {
   });
 };
 
+export const uploadVideoToCloudinary = (fileBuffer) => {
+  return new Promise((resolve, reject) => {
+    const stream = cloudinary.uploader.upload_stream(
+      { resource_type: "video" },
+      (error, result) => {
+        if (error) reject(error);
+        else resolve(result.secure_url);
+      }
+    );
+    stream.end(fileBuffer);
+  });
+};
 export default cloudinary;

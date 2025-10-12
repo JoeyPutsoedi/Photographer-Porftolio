@@ -41,7 +41,7 @@ export const deleteImage = (categoryTitle, id) =>
 
 //add video
 export const addVideo = (formData) =>
-  api.post("/video", formData, {
+  api.post("/videos", formData, {
     headers: { "Content-Type": "multipart/form-data" },
   });
 

@@ -1,13 +1,16 @@
 import Video from "../Models/videoModel.js";
 import { uploadToCloudinary } from "../Config/Cloudinary.js";
+import { uploadVideoToCloudinary } from "../Config/Cloudinary.js";
 
 //add video
 export const addVideo = async (req, res) => {
   try {
-    const videoUrl = await uploadToCloudinary(req.file.buffer);
+    const videoUrl = await uploadVideoToCloudinary(req.files.video[0].buffer);
+    const thumbnail = await uploadToCloudinary(req.files.thumbnail[0].buffer);
 
     const video = new Video({
       videoUrl,
+      thumbnail,
     });
 
     await video.save();
@@ -20,10 +23,10 @@ export const addVideo = async (req, res) => {
 //fetch videos
 export const fetchVideo = async (req, res) => {
   try {
-    const videos = await Video.find().sort(createdAt - 1);
+    const videos = await Video.find().sort({ createdAt: -1 });
     res.json(videos);
   } catch (error) {
-    res.status(500).json({ error: err.message });
+    res.status(500).json({ error: error.message });
   }
 };
 
