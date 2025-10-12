@@ -277,6 +277,9 @@ table.Table thead th:first-child {
   height: inherit;
   border-radius: 1em;
 }
+.videoForm label {
+  font-size: 12px;
+}
 .videoForm h2 {
   text-align: center;
 }
@@ -306,7 +309,7 @@ table.Table thead th:first-child {
   height: 3em;
   border-radius: 0.45em;
   border: none;
-  margin-top: 3em;
+  margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
@@ -326,9 +329,21 @@ table.Table thead th:first-child {
 }
 .videosDisplayed {
   display: flex;
+
   gap: 0.5em;
 }
 .video-display .videosDisplayed video {
   height: 18em;
-  width: 15em;
+  width: 100;
+}
+.videoActions button {
+  z-index: 23333;
+
+  background-color: rgb(248, 43, 67);
+  border: 1px solid hsla(0, 0%, 0%, 0.311);
+  border-radius: 0.75em;
+  color: white;
+  width: 7em;
+  height: 2.5em;
+  cursor: pointer;
 }
