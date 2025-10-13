@@ -1,25 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import NavbarB from "../Components/NavBarB";
 import editorialStyles from "../Styles/GallerySecs.module.css";
 import { Link } from "react-router-dom";
-import abekho from "../Images/Thumbnails/abekho.png";
-import birthday from "../Images/Thumbnails/birthday.png";
-import tendencies from "../Images/Thumbnails/tendencies.png";
-import phoenix from "../Images/Thumbnails/phoenix.png";
-import studio from "../Images/Thumbnails/studio.png";
-import abekhoVid from "../video/Sonwabile x Blxckie - Abekho (Official Video).mp4";
-import tendenciesVid from "../video/Brad Molley - Tendencies (Official Video).mp4";
-import birthdayVid from "../video/BTS Birthday Shoot.mp4";
-import studioVid from "../video/BTS Studio.mp4";
-import btsVid from "../video/Red Phoenix.mp4";
 import { useRef } from "react";
 import FocusOverlay from "../Components/CameraFocusCursor";
-const VideosPage = () => {
-  const mainVideoRef = useRef(null);
+import { fetchVideos } from "../api/api";
 
+const VideosPage = () => {
+  const [videos, setVideos] = useState();
+  const mainVideoRef = useRef(null);
   const videoChange = (src) => {
     mainVideoRef.current.src = src;
   };
+
+  useEffect(() => {
+    fetchVideos().then((res) => setVideos(res.data));
+  }, []);
   return (
     <>
       <FocusOverlay />
@@ -33,46 +29,34 @@ const VideosPage = () => {
         </Link>
         <section className={editorialStyles.setVid}>
           <div className={editorialStyles.uppercolVid}>
-            <video
-              ref={mainVideoRef}
-              controls
-              class={editorialStyles.vidPlaceholder}
-              src={abekhoVid}
-            ></video>
+            {videos?.length > 0 ? (
+              <video
+                key={videos[0]?.id}
+                ref={mainVideoRef}
+                controls
+                class={editorialStyles.vidPlaceholder}
+                src={videos[0]?.videoUrl}
+              ></video>
+            ) : (
+              <p>No videos</p>
+            )}
           </div>
         </section>
         <section className={editorialStyles.set2Vid}>
           <div className={editorialStyles.lowercolVid}>
-            <video
-              className={editorialStyles.footVid}
-              src={abekhoVid}
-              poster={abekho}
-              onClick={() => videoChange(abekhoVid)}
-            ></video>
-            <video
-              className={editorialStyles.footVid}
-              src={tendenciesVid}
-              poster={tendencies}
-              onClick={() => videoChange(tendenciesVid)}
-            ></video>
-            <video
-              className={editorialStyles.footVid}
-              src={birthdayVid}
-              poster={birthday}
-              onClick={() => videoChange(birthdayVid)}
-            ></video>
-            <video
-              className={editorialStyles.footVid}
-              src={studioVid}
-              poster={studio}
-              onClick={() => videoChange(studioVid)}
-            ></video>
-            <video
-              className={editorialStyles.footVid}
-              src={btsVid}
-              poster={phoenix}
-              onClick={() => videoChange(btsVid)}
-            ></video>
+            {videos?.length > 0 ? (
+              videos?.map((video) => (
+                <video
+                  key={video.id}
+                  className={editorialStyles.footVid}
+                  src={video.videoUrl}
+                  poster={video.thumbnail}
+                  onClick={() => videoChange(video.videoUrl)}
+                ></video>
+              ))
+            ) : (
+              <p>No videos on this page....</p>
+            )}
           </div>
         </section>
       </div>
