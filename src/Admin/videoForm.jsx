@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import "../Styles/Admin.css";
-import { addVideo, fetchVideos } from "../api/api";
+import { addVideo, fetchVideos, deleteVideo } from "../api/api";
 
 const videoForm = () => {
   const [videos, setVideos] = useState([]);
-  const [thumbnails, setThumbnails] = useState([]);
   const [file, setFile] = useState(null);
   const [thumbnail, setThumbnail] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -37,6 +36,16 @@ const videoForm = () => {
     }
   };
 
+  //handle delete
+  const handleDelete = async (id) => {
+    try {
+      await deleteVideo(id);
+      setVideos((videos) => videos.filter((video) => video._id !== id));
+    } catch (error) {
+      console.log(error);
+      alert("Failed to delete");
+    }
+  };
   return (
     <div className="videos-wrapper">
       <form className="videoForm" onSubmit={handleSubmit}>
@@ -69,7 +78,7 @@ const videoForm = () => {
             videos.map((video) => (
               <div className="videoActions" key={video._id}>
                 <video src={video.videoUrl} controls />
-                <button onClick={() => handleDelete(img._id)}>
+                <button onClick={() => handleDelete(video._id)}>
                   Delete Image
                 </button>
               </div>
