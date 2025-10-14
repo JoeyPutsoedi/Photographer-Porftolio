@@ -328,11 +328,16 @@ table.Table thead th:first-child {
   padding: 4em 1em 1em 1em;
 }
 
+.videosDisplayed {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
 .video-display .videosDisplayed video {
   margin-top: 2em;
   height: 18em;
   width: 100%;
-  border-radius: 0.5em;
+  border-radius: 0.75em;
 }
 .videoActions button {
   display: block;
@@ -345,4 +350,9 @@ table.Table thead th:first-child {
   width: 7em;
   height: 2.5em;
   cursor: pointer;
+}
+.videoActions button:hover {
+  transition: 0.3s;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgb(217, 46, 66);
 }

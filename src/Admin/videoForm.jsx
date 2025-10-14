@@ -79,7 +79,7 @@ const videoForm = () => {
               <div className="videoActions" key={video._id}>
                 <video src={video.videoUrl} controls />
                 <button onClick={() => handleDelete(video._id)}>
-                  Delete Image
+                  Delete Video
                 </button>
               </div>
             ))
