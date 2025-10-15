@@ -5,7 +5,7 @@ import cors from "cors";
 import categoryRoutes from "../backend/routes/categories.js";
 import imageRoutes from "../backend/routes/images.js";
 import videoRoutes from "../backend/routes/video.js";
-
+import adminRoutes from "../backend/routes/admin.js";
 //oonfigure .env file to gain access to it's contents
 dotenv.config();
 
@@ -36,6 +36,7 @@ app.use((req, res, next) => {
 app.use("/api/categories", categoryRoutes);
 app.use("/api/images", imageRoutes);
 app.use("/api/videos", videoRoutes);
+app.use("/api/admin", adminRoutes);
 //Connect to mongo DB
 mongoose
   .connect(process.env.MONG_URI)
