@@ -51,4 +51,16 @@ export const fetchVideos = () => api.get("/videos");
 //delete video
 
 export const deleteVideo = (id) => api.delete(`/videos/${id}`);
+
+//create Admin
+export const createAdmin = (formData) =>
+  api.post("/createAdmin", formData, {
+    headers: { "Content-Type": "application/json" },
+  });
+
+//login Admin
+export const loginAdmin = (formData) =>
+  api.post("/admin/login", formData, {
+    headers: { "Content-Type": "application/json" },
+  });
 export default api;

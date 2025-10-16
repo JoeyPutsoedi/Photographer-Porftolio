@@ -16,7 +16,7 @@ const adminSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-//Hashing password-------------------------------------------
+//signing admin &Hashing password------------------------------------------------------------------------------
 adminSchema.statics.signUpAdmin = async function (username, password) {
   //Validation------------------------------
   if (!username || !password) {
@@ -47,4 +47,30 @@ adminSchema.statics.signUpAdmin = async function (username, password) {
   return admin;
 };
 
+//Logging in a user---------------------------------------------------------------------------------------------
+
+adminSchema.statics.logInAdmin = async function (username, password) {
+  //Validation------------------------------
+  if (!username || !password) {
+    throw new Error("Username & Password required!!!");
+  }
+
+  //check if the admin credentials exist on the database
+  const admin = await this.findOne({ username });
+
+  //if the admmin credentials input don't match any on the database then outut an error
+  if (!admin) {
+    throw Error("Username not valid!");
+  }
+
+  //match the password entered to see if it matches the one in the database
+
+  const match = await bcrypt.compare(password, admin.password);
+
+  if (!match) {
+    throw Error("Incorrect password");
+  }
+
+  return admin;
+};
 export default mongoose.model("Admin", adminSchema);
