@@ -159,6 +159,10 @@
   nav {
     padding: 0.5em 1em 0.5em 1em;
   }
+
+  .login-wrapper form {
+    transform: scale(0.7);
+  }
   @media (max-width: 375px) {
   }
 }

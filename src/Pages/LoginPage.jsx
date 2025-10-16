@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../Styles/Login.css";
+import "../Styles/Mediaqueries.css";
 import { loginAdmin } from "../api/api";
 import Navbar from "../Components/Navbar";
 import { useAuthContext } from "../hooks/useAuthContext";
