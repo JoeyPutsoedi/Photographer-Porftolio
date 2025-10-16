@@ -88,6 +88,7 @@ const categoryForm = () => {
             required
           />
           <input
+            className="selectThumbs"
             type="file"
             accept="image/*"
             multiple
