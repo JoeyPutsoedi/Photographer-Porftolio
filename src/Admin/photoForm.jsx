@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { addImage, fetchImage, fetchCategories, deleteImage } from "../api/api";
 import "../Styles/Admin.css";
+import "../Styles/Mediaqueries.css";
 const photoForm = () => {
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState("");

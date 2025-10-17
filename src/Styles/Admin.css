@@ -166,7 +166,7 @@ table.Table thead th:first-child {
 .photoForm h2 {
   text-align: center;
 }
-.photoForm select {
+zz .photoForm select {
   display: block;
   margin-left: auto;
   margin-right: auto;
