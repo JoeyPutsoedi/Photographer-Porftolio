@@ -35,6 +35,8 @@ export const loginAdmin = async (req, res) => {
 
     res.status(200).json({ username, token });
   } catch (error) {
+    console.log("Login error:", error.message);
+
     res.status(400).json({ error: error.message });
   }
 };
