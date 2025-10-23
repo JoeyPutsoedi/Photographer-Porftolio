@@ -14,7 +14,7 @@ export const createAdmin = async (req, res) => {
     const admin = await Admin.signUpAdmin(username, password);
 
     //create a token
-    const token = createToken(Admin._id);
+    const token = createToken(admin._id);
 
     res.status(200).json({ username, token });
   } catch (error) {
@@ -31,7 +31,7 @@ export const loginAdmin = async (req, res) => {
     const admin = await Admin.logInAdmin(username, password);
 
     //create a token
-    const token = createToken(Admin._id);
+    const token = createToken(admin._id);
 
     res.status(200).json({ username, token });
   } catch (error) {
