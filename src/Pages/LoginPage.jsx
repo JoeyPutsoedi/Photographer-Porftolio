@@ -42,17 +42,20 @@ const LoginPage = () => {
 
     setLoading(true);
     setErrors(null);
+
     const formData = {
       username: email,
       password: password,
     };
 
     try {
-      const res = await loginAdmin(formData);
+      const res = await loginAdmin({ username: email, password });
+      console.log(res.data);
 
       if (res && res.data) {
         setLoading(false);
         alert("Logged In succesfully");
+
         localStorage.setItem("admin", JSON.stringify(res.data)); //store user token until they signout
 
         //UPDATE AUTHCONTEXT
