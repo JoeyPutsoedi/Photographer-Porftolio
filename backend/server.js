@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 app.use("/api/categories", categoryRoutes);
 app.use("/api/images", imageRoutes);
 app.use("/api/videos", videoRoutes);
-app.use("/api/admin", adminRoutes);
+app.use("/api", adminRoutes);
 //Connect to mongo DB
 mongoose
   .connect(process.env.MONG_URI)
