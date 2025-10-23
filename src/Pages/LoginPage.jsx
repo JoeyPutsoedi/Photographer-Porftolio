@@ -1,3 +1,25 @@
+// const handleValidation = () => {
+//   let formErrors = {};
+//   let isValid = true;
+
+//   if (!email) {
+//     formErrors.email = "Please enter your email";
+//     isValid = false;
+//   } else if (!!/\S+@\S+\.\S+/.test(email)) {
+//     formErrors.email = "Enter a valid email address";
+//     isValid = false;
+//   }
+
+//   if (!password) {
+//     formErrors.email = "Please enter your password";
+//     isValid = false;
+//   } else if (password.length < 6) {
+//     formErrors.password = "Please enter a valid password";
+//     isValid = false;
+//   }
+//   setErrors(formErrors);
+//   return isValid;
+// };
 import React, { useState } from "react";
 import "../Styles/Login.css";
 import "../Styles/Mediaqueries.css";
@@ -14,37 +36,16 @@ const LoginPage = () => {
   const { dispatch } = useAuthContext();
   const navigation = useNavigate();
 
-  // const handleValidation = () => {
-  //   let formErrors = {};
-  //   let isValid = true;
-
-  //   if (!email) {
-  //     formErrors.email = "Please enter your email";
-  //     isValid = false;
-  //   } else if (!!/\S+@\S+\.\S+/.test(email)) {
-  //     formErrors.email = "Enter a valid email address";
-  //     isValid = false;
-  //   }
-
-  //   if (!password) {
-  //     formErrors.email = "Please enter your password";
-  //     isValid = false;
-  //   } else if (password.length < 6) {
-  //     formErrors.password = "Please enter a valid password";
-  //     isValid = false;
-  //   }
-  //   setErrors(formErrors);
-  //   return isValid;
-  // };
   /*Handle logging in------------------------------------------------------------------------------------------- */
   const handleSubmit = async (e) => {
     e.preventDefault(); //prevent auto submit
 
     setLoading(true);
     setErrors(null);
-    const formData = new FormData();
-    formData.append("username", email);
-    formData.append("password", password);
+    const formData = {
+      username: email,
+      password: password,
+    };
 
     try {
       const res = await loginAdmin(formData);
