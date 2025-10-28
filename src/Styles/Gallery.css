@@ -143,6 +143,14 @@ nav a {
 .aboutCont {
   padding-top: 0.8em;
 }
+.aboutCont h1 {
+  padding-top: 0.2em;
+  font-family: AlteB;
+  font-size: 90px;
+  font-weight: bolder;
+  letter-spacing: -9px;
+  margin-left: -30px;
+}
 h2 {
   font-family: goth;
   margin-bottom: 1.3em;
@@ -154,6 +162,7 @@ h2 {
   width: 100%;
   display: grid;
   place-content: center;
+  margin-top: -2.6em;
 }
 
 .about-field {
@@ -182,6 +191,7 @@ h2 {
 
 .grid-item1 {
   font-size: 14px;
+  font-family: coco;
 }
 
 .grid-item2 {
@@ -204,6 +214,7 @@ h2 {
 
 .skills {
   display: grid;
+  font-family: coco;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.3em;
 }
@@ -238,6 +249,7 @@ h2 {
 }
 /*----------------------Contact-----------------------*/
 .contactCont h1 {
+  padding-top: 0.5em;
   font-family: AlteB;
   font-size: 90px;
   font-weight: bolder;
@@ -298,6 +310,7 @@ button:hover .fa-arrow-right {
 }
 
 .contact-inputs {
+  padding: 0.3em 0 0 1em;
   width: 17rem;
   height: 4em;
   border: none;

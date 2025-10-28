@@ -43,13 +43,12 @@ const LoginPage = () => {
     setLoading(true);
     setErrors(null);
 
-    const formData = {
-      username: email,
-      password: password,
-    };
+    const formData = new FormData();
+    formData.append("username", email);
+    formData.append("password", password);
 
     try {
-      const res = await loginAdmin({ username: email, password });
+      const res = await loginAdmin(formData);
       console.log(res.data);
 
       if (res && res.data) {
