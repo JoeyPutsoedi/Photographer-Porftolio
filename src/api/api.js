@@ -59,8 +59,12 @@ export const createAdmin = (formData) =>
   });
 
 //login Admin
-export const loginAdmin = (formData) =>
-  api.post("/login", formData, {
-    headers: { "Content-Type": "application/json" },
-  });
+export const loginAdmin = (email, password) =>
+  api.post(
+    "/login",
+    { email, password },
+    {
+      headers: { "Content-Type": "application/json" },
+    }
+  );
 export default api;
