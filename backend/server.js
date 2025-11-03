@@ -19,7 +19,7 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://creativerori.vercel.app",
-      "https://backend-creativerori.fly.dev/",
+      "https://backend-creativerori.fly.dev",
       "https://creativerori.online",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
