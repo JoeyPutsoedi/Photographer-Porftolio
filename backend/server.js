@@ -2,10 +2,10 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
-import categoryRoutes from "../backend/routes/categories.js";
-import imageRoutes from "../backend/routes/images.js";
-import videoRoutes from "../backend/routes/video.js";
-import adminRoutes from "../backend/routes/admin.js";
+import categoryRoutes from "./routes/categories.js";
+import imageRoutes from "./routes/images.js";
+import videoRoutes from "./routes/video.js";
+import adminRoutes from "./routes/admin.js";
 //oonfigure .env file to gain access to it's contents
 dotenv.config();
 
@@ -19,8 +19,8 @@ app.use(
     origin: [
       "http://localhost:3000",
       "https://creativerori.vercel.app",
-      "https://creativerori-api.onrender.com",
-      "https://creativerori.online"
+      "https://backend-creativerori.fly.dev/",
+      "https://creativerori.online",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
     credentials: true,
