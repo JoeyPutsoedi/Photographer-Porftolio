@@ -38,6 +38,11 @@ export const addImage = async (req, res) => {
         return imageDoc;
       })
     );
+    console.log(
+      "FILES RECEIVED:",
+      req.files?.length,
+      req.files?.map((f) => f.originalname)
+    );
 
     res.status(201).json(uploadedImages);
   } catch (err) {
