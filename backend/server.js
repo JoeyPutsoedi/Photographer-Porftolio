@@ -20,6 +20,7 @@ app.use(
       "http://localhost:3000",
       "https://creativerori.vercel.app",
       "https://backend-creativerori.fly.dev",
+      "https://creativerori-api.onrender.com",
       "https://creativerori.online",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
