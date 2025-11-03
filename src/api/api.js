@@ -4,7 +4,7 @@ const api = axios.create({
   baseURL:
     window.location.hostname === "localhost"
       ? "http://localhost:5000/api"
-      : "https://backend-creativerori.fly.dev/api",
+      : "https://creativerori-api.onrender.com/api",
 });
 
 //fetch categories
