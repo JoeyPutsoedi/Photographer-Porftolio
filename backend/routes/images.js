@@ -12,7 +12,7 @@ const router = express.Router();
 router.get("/:categoryTitle", getImages);
 
 //Upload an image
-router.post("/", upload.array("image"), addImage);
+router.post("/", upload.single("image"), addImage);
 
 //Delete an image
 router.delete("/:category/:id", deleteImage);
