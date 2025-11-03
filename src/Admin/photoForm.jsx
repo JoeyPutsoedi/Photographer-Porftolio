@@ -22,17 +22,17 @@ const photoForm = () => {
     setLoading(true);
     const formData = new FormData();
     formData.append("categoryTitle", categoryId);
-    image.forEach((file) => formData.append("image", file));
+    formData.append("image", image);
 
     try {
       const res = await addImage(formData).catch((err) => err);
       if (res && res.data) {
         // Update UI instantly with new image
-        setImagesDisplay([...imagesDisplay, ...res.data]);
-        alert("Images uploaded successfully");
+        setImagesDisplay((prevImages) => [...prevImages, res.data]);
       }
 
-      setImage([]);
+      alert("Image uploaded successfully");
+      setImage(null);
     } catch (err) {
       console.log(err);
       alert("Upload failed");
@@ -89,8 +89,7 @@ const photoForm = () => {
           className="uploadImage"
           type="file"
           accept="image/*"
-          multiple
-          onChange={(e) => setImage([...e.target.files])}
+          onChange={(e) => setImage(e.target.files[0])}
           required
         />
 
