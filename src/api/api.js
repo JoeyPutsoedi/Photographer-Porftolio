@@ -30,10 +30,7 @@ export const fetchImage = (categoryTitle) =>
   api.get(`/images/${categoryTitle}`);
 
 //add image
-export const addImage = (formData) =>
-  api.post("/images", formData, {
-    headers: { "Content-Type": "multipart/form-data" },
-  });
+export const addImage = (formData) => api.post("/images", formData);
 
 //delete image
 export const deleteImage = (categoryTitle, id) =>
