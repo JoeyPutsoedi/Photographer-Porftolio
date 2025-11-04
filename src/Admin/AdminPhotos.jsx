@@ -4,7 +4,7 @@ import PhotoForm from "../Admin/photoForm";
 import "../Styles/Admin.css";
 const AdminPhotos = () => {
   return (
-    <div class="Admin-wrapper">
+    <div className="Admin-wrapper">
       <AdminNavBar />
       <PhotoForm />
     </div>

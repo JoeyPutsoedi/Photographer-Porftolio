@@ -5,7 +5,7 @@ import "../Styles/Mediaqueries.css";
 const photoForm = () => {
   const [categories, setCategories] = useState([]);
   const [categoryId, setCategoryId] = useState("");
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState([]);
   const [imagesDisplay, setImagesDisplay] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -22,17 +22,16 @@ const photoForm = () => {
     setLoading(true);
     const formData = new FormData();
     formData.append("categoryTitle", categoryId);
-    formData.append("image", image);
+    image.forEach((img) => formData.append("image", img));
 
     try {
       const res = await addImage(formData).catch((err) => err);
       if (res && res.data) {
-        // Update UI instantly with new image
-        setImagesDisplay((prevImages) => [...prevImages, res.data]);
+        alert("Image uploaded successfully");
       }
+      setImagesDisplay([...imagesDisplay, ...res.data]);
 
-      alert("Image uploaded successfully");
-      setImage(null);
+      setImage([]);
     } catch (err) {
       console.log(err);
       alert("Upload failed");
@@ -89,7 +88,8 @@ const photoForm = () => {
           className="uploadImage"
           type="file"
           accept="image/*"
-          onChange={(e) => setImage(e.target.files[0])}
+          multiple
+          onChange={(e) => setImage([...e.target.files])}
           required
         />
 
