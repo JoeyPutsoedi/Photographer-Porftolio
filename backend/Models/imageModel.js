@@ -7,10 +7,7 @@ const imageSchema = mongoose.Schema(
       ref: "Category",
       required: true,
     },
-    imageUrl: {
-      type: String,
-      required: true,
-    },
+    imageUrl: [String],
   },
   { timestamps: true }
 );

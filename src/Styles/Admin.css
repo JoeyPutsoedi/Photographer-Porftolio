@@ -166,11 +166,9 @@ table.Table thead th:first-child {
 .photoForm h2 {
   text-align: center;
 }
-zz .photoForm select {
+.photoForm select {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1em;
+  margin: 1em auto 1em auto;
 }
 .photoForm input {
   display: block;
