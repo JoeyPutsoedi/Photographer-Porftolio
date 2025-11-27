@@ -46,12 +46,12 @@ const AboutPage = () => {
             <div className="gridItem grid-item4">
               <h2 className="">CLIENTS THAT HAVE TRUSTED ME: </h2>
               <div className="brands">
-                <i className="fa-brands fa-tiktok"></i>
-                <i className="fa-brands fa-freebsd"></i>
-                <i className="fa-brands fa-tiktok"></i>
-                <i className="fa-brands fa-freebsd"></i>
-                <i className="fa-brands fa-tiktok"></i>
-                <i className="fa-brands fa-freebsd"></i>
+                <p>ARCHIVE</p>
+                <p>COTTONFEST</p>
+                <p>MAJORLEAGUE DJS</p>
+                <p>REEBOK</p>
+                <p>ROOTS BUTCHERY</p>
+                <p>VANS</p>
               </div>
             </div>
           </div>

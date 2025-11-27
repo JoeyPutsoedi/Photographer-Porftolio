@@ -237,12 +237,25 @@ h2 {
 }
 
 .brands {
-  width: 150px;
-  font-size: 2em;
+  width: 100%;
+  height: 100%;
+  font-size: 12px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em;
 }
 
+.brands p {
+  font-family: coco;
+
+  border-radius: 0.9em;
+  place-content: center;
+  height: 3em;
+  width: 11em;
+  padding: 0.2em 0.4em;
+  color: #e3e3e3;
+  background-color: #1e1e1e;
+}
 .aboutBtn:hover {
   background: #1e1e1e;
   color: #d5d5d5;
