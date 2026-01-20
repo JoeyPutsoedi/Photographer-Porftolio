@@ -50,6 +50,7 @@ nav > div,
 footer > div {
   padding: 2em;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .header {
