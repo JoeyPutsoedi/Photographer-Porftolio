@@ -13,6 +13,7 @@ const categoryForm = () => {
   const [newTitle, setNewTitle] = useState(""); //store the title state when we create a new category
   const [newFiles, setNewFiles] = useState([]); //store the thumbnails state when we create a new category
   const [loading, setLoading] = useState(false); // boolean for showing "Uploading..." while sending data.
+  const [updating, setUpdating] = useState(false); //lloading state for when user updates
   const [updateData, setUpdateData] = useState({}); //syate to store data when we update
 
   //fetch categories when the component loads initially
@@ -51,7 +52,7 @@ const categoryForm = () => {
   //handle update function--------------------------------------------------------------------
   const handleUpdate = async (id) => {
     const data = updateData[id]; //get the id of the particular object/category we're updating
-
+    setUpdating(true);
     if (!data) return alert("No update data for this category");
 
     const formData = new FormData();
@@ -63,6 +64,7 @@ const categoryForm = () => {
       const res = await updateCategory(id, formData);
       categories.map((c) => (c._id === id ? res.data : c));
       alert("Category updated successfully!");
+      setUpdating(false);
     } catch (err) {
       alert("Failed to update category");
       console.error(err);
@@ -152,7 +154,7 @@ const categoryForm = () => {
                       onClick={() => handleUpdate(cat._id)}
                       className="update"
                     >
-                      Update
+                      {updating ? "updating..." : "update"}
                     </button>
                   </td>
                   <td>
